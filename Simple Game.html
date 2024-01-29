@@ -1,0 +1,105 @@
+<html>
+<head>
+ <title>a simple game</title>
+ </head>
+ <body style="background-color:green" >
+ <script> 
+ var counteroverall= 0;
+  var countersuccess= 0;
+  var z=0;
+ function fanction1() {
+ //var x= document.getElementById("myform").value; 
+ var x= document.forms["myform"]["arithmoi"].value; 
+ var y=9;
+
+ counteroverall=counteroverall+1;
+ 
+ 
+ if (x==9){
+  document.getElementById("1").innerHTML="right number!";
+  document.getElementById("1").style="color:yellow; text-align:center"; 
+     countersuccess=countersuccess+1;
+	 z=(countersuccess/counteroverall)*100;
+	document.getElementById("2").innerHTML=z;
+	
+	if (z<40)
+		document.getElementById("3").innerHTML="good";
+		
+	else if (z<70 & z>40)	
+	
+		document.getElementById("3").innerHTML="very good";
+		
+	else if (z<100 & z>70)	
+	document.getElementById("3").innerHTML="exellence";
+ }
+ 
+ else if (x==1){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==2){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+else if (x==3){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==4){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==5){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==6){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==7){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==8){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+ else if (x==0){
+ document.getElementById("1").innerHTML="wrong number!";
+  document.getElementById("1").style="color:red; text-align:center"; 
+ }
+//document.getElementById("1").innerHTML=x;  
+ }
+ </script>
+ <h1 style="text-align:center; color:blue"> Predict the hidden number! </h1>
+ <p style="text-align:center" > Chose the number,you think that is hidden,from the list following: </p>
+ <form onsubmit="return fanction1()" id="2" name="myform">
+ <input type="radio" value="0" name="arithmoi" checked > 0
+ <input type="radio" value="1" name="arithmoi" > 1
+ <input type="radio" value="2" name="arithmoi" > 2
+ <input type="radio" value="3" name="arithmoi" > 3
+ <input type="radio" value="4" name="arithmoi" > 4
+ <input type="radio" value="5" name="arithmoi" > 5
+ <input type="radio" value="6" name="arithmoi" > 6
+ <input type="radio" value="7" name="arithmoi" > 7
+ <input type="radio" value="8" name="arithmoi" > 8
+ <input type="radio" value="9" name="arithmoi" > 9
+ <br>
+  <input type="submit" >
+ <input type="reset" >
+ </form>
+ 
+ <button type="button"  onclick="fanction1()"> clickme</button>
+ <p id="1"> </p>
+ <p id="2"> </p>
+ <p id="3"> </p>
+ 
+ 
+ <hr><h1 style="text-align:center; color:blue"> statics </h1>
+ <p style="text-align:center" > your success persentage is: </p>
+ 
+ 
+ <hr> 
+ </body>
+ </html>
